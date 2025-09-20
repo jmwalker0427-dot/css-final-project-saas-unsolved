@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  min-width: 360px;
+}
+
+.content {
+  max-width: 100vp;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px 10px;
+  height: 86px;
+  width: 100vw;
+  background-color: #f6f8fa;
+  position: fixed;
+  top: 0;
+  /* z-index: 0; */
+}
+
+.logo {
+  display: flex;
+  width: 100px;
+  height: 60px;
+}
+
+.top-navigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.top-navigation ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.top-navigation ul li {
+  text-decoration: none;
+}
+
+.top-navigation ul li a {
+  text-decoration: none;
+  color: #677788;
+}
+
+.top-navigation .buy-now-button {
+  border: 1px solid #2476ff;
+  background-color: #2476ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 102px;
+  border-radius: 30px;
+}
+
+.hero-section {
+  display: flex;
+  height: 532px;
+  width: 100%;
+  align-items: center;
+  padding: 86px 30px 0;
+
+}
+
+.hero-section-links {
+  display: flex;
+  flex-direction: column;
+  width: 334px;
+  
+}
