@@ -6,14 +6,24 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 1024px;
   min-width: 360px;
 }
 
 .content {
   max-width: 100vp;
-  padding: 0 30px;
-  margin: 0 auto;
+  /* padding: 0 30px; */
+}
+
+a {
+  text-decoration: none;
+  color: #677788;
+}
+
+p {
+  color:#677788;
 }
 
 .header-content {
@@ -24,8 +34,8 @@ body {
   height: 86px;
   width: 100vw;
   background-color: #f6f8fa;
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
   /* z-index: 0; */
 }
 
@@ -48,15 +58,6 @@ body {
   gap: 20px;
 }
 
-.top-navigation ul li {
-  text-decoration: none;
-}
-
-.top-navigation ul li a {
-  text-decoration: none;
-  color: #677788;
-}
-
 .top-navigation .buy-now-button {
   border: 1px solid #2476ff;
   background-color: #2476ff;
@@ -71,16 +72,198 @@ body {
 
 .hero-section {
   display: flex;
-  height: 532px;
-  width: 100%;
+  height: 446px;
+  width: 1024px;
   align-items: center;
-  padding: 86px 30px 0;
+  background-image: url(../assets/bg/background-top.svg);
+  padding: 40px 30px 0;
+}
 
+.left-hero-section {
+  display: flex;
+  flex-direction: column;
+  width: 482px;
+  gap: 30px;
+}
+
+.left-text {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  width: 334px;
+}
+
+.left-text h1 {
+  font-size: 40px;
 }
 
 .hero-section-links {
   display: flex;
+  gap: 24px;
+}
+
+.top-video-button {
+  background-color: #2476ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 137px;
+  gap: 8px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  font-size: 12px;
+  /* cursor: pointer; */
+}
+
+.top-video-button i {
+  font-size: 18px;
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  width: 482px;
+  height: 100%;
+  position: relative;
+}
+
+.small-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.small-bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  box-shadow: 0 3px 13px 0 #00000040;
+  border-radius: 50%;
+}
+
+.large-logo {
+  height: 48px;
+  width: 48px;
+}
+
+.large-bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  box-shadow: 0 3px 13px 0 #00000040;
+  border-radius: 50%;
+}
+
+.logo-bubble-google-ads {
+  position: absolute;
+  top: 290px;
+  left: 155px;
+}
+
+.logo-bubble-google {
+  position: absolute;
+  top: 10px;
+  left: 64px;
+}
+
+.logo-bubble-atlassian {
+  position: absolute;
+  top: 70px;
+  left: 170px;
+}
+
+.logo-bubble-asana {
+  position: absolute;
+  top: 10px;
+  left: 380px;
+}
+
+.logo-bubble-calendar {
+  position: absolute;
+  top: 312px;
+  left: 364px;
+}
+
+.logo-bubble-paypal {
+  position: absolute;
+  top: 172px;
+  left: 44px;
+}
+
+.logo-bubble-weave {
+  position: absolute;
+  top: 172px;
+  left: 262px;
+}
+
+.why-front-section {
+  display: flex;
   flex-direction: column;
-  width: 334px;
-  
+  height: 354px;
+  width: 100%;
+  gap: 40px;
+  padding: 0 30px 80px;
+}
+
+.why-front-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.why-front-title p {
+  text-align: center;
+  width: 475px;
+  color: #677788;
+  font-weight: 500;
+}
+
+.why-front-bullets-list {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 34px 0;
+}
+
+.bullet-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 0 26px;
+}
+
+.bullet-box p {
+  font-size: 16px;
+  color: #000;
+}
+
+.bullet-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #00000000;
+  border-radius: 50%;
+  background-color: #ecf2ff;
+}
+
+.inner-dot {
+  height: 6px;
+  width: 6px;
+  background-color: #0066ff;
+  border-radius: 50%;
 }
