@@ -2,10 +2,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 500;
   max-width: 100%;
@@ -21,6 +21,11 @@ body {
 a {
   text-decoration: none;
   color: #677788;
+}
+
+a:hover {
+  color: #2476ff;
+
 }
 
 p {
@@ -61,7 +66,7 @@ p {
 }
 
 .top-navigation .buy-now-button {
-  border: 1px solid #2476ff;
+  border: 1px solid #2476ff00;
   background-color: #2476ff;
   color: white;
   display: flex;
@@ -70,11 +75,21 @@ p {
   height: 45px;
   width: 102px;
   border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out,
+    color 0.5s ease-in-out;
+}
+
+.buy-now-button:hover {
+  background-color: white;
+  border: 2px solid #2476ff;
+  color: #2476ff;
 }
 
 .hero-section {
   display: flex;
   height: 446px;
+  width: 100%;
   align-items: center;
   background-image: url(../assets/bg/background-top.svg);
   padding: 40px 30px 0;
@@ -112,11 +127,18 @@ p {
   height: 48px;
   width: 137px;
   gap: 8px;
-  background-color: #007bff;
   border: none;
   border-radius: 30px;
   font-size: 12px;
-  /* cursor: pointer; */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.5s ease-in-out,
+    border 0.3s ease-in-out;
+}
+
+.top-video-button:hover {
+  background-color: white;
+  color: #2476ff;
+  border: 2px solid #2476ff;
 }
 
 .top-video-button i {
@@ -128,9 +150,10 @@ p {
   align-items: center;
 }
 
+
 .logo-container {
   display: flex;
-  width: 482px;
+  width: 100%;
   height: 100%;
   position: relative;
 }
@@ -169,44 +192,51 @@ p {
 
 .logo-bubble-google-ads {
   position: absolute;
-  top: 290px;
-  left: 155px;
+  top: 71.4%;
+  left: 32.2%;
+  animation: slide-in 3s ease-in-out 0.5s 1 alternate both running;
 }
 
 .logo-bubble-google {
   position: absolute;
-  top: 10px;
-  left: 64px;
+  top: 2.5%;
+  left: 13.3%;
+  animation: rotate-rise 3s ease-in-out 0.5s 1 alternate both running;
 }
 
 .logo-bubble-atlassian {
   position: absolute;
-  top: 70px;
-  left: 170px;
+  top: 17.2%;
+  left: 35.3%;
+  animation: bounce 3s ease-in-out 0.5s 1 alternate both running;
 }
 
 .logo-bubble-asana {
   position: absolute;
-  top: 10px;
-  left: 380px;
+  top: 2.5%;
+  left: 78.8%;
+  animation: rotate-rise 3s ease-in-out 0.5s 1 alternate both running;
 }
 
 .logo-bubble-calendar {
   position: absolute;
-  top: 312px;
-  left: 364px;
+  top: 76.8%;
+  left: 75.5%;
+  animation: bounce 3s ease-in-out 0.5s 1 alternate both running
 }
 
 .logo-bubble-paypal {
   position: absolute;
-  top: 172px;
-  left: 44px;
+  top: 42.4%;
+  left: 9.1%;
+  animation: slide-in 3s ease-in-out 0.5s 1 alternate both running;
 }
 
 .logo-bubble-weave {
   position: absolute;
-  top: 172px;
-  left: 262px;
+  top: 42.4%;
+  left: 54.4%;
+  animation: bounce 3s ease-in-out 0.5s 1 alternate both running
 }
 
 .why-front-section {
@@ -235,9 +265,8 @@ p {
 
 .why-front-bullets-list {
   display: flex;
-  justify-content: space-evenly;
+
   padding: 0 34px 0;
-  position: relative;
 }
 
 .bullet-box {
@@ -254,6 +283,13 @@ p {
   color: #000;
 }
 
+.bullet-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
 .bullet-circles {
   display: flex;
   justify-content: center;
@@ -265,6 +301,33 @@ p {
   background-color: #ecf2ff;
 }
 
+.bullet-top::before,
+.bullet-top::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  margin: auto;
+  width: 35%;
+  top: 50%;
+  background-color: #e6e9f2;
+}
+
+.bullet-top::before {
+  left: 0;
+}
+
+.bullet-top::after {
+  right: 0;
+}
+
+.basic-box.bullet-top::before {
+  content: none;
+}
+
+.page-box.bullet-top::after {
+  content: none;
+}
+
 .inner-dot {
   height: 6px;
   width: 6px;
@@ -273,28 +336,22 @@ p {
 }
 
 .bullet-line {
-  position: absolute;
-  top: 35%;
+  text-align: center;
   height: 1px;
-  width: 17.5%;
+  width: 37%;
   background-color: #e6e9f2;
 }
 
-.horizontal-line-left {
-  left: 18%;
-}
-
-.horizontal-line-middle {
-  left: 41.25%;
-}
-
-.horizontal-line-right {
-  left: 64.5%;
+.bullet-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .pricing-section {
   display: flex;
   flex-direction: column;
+  padding-bottom: 120px;
 }
 
 .pricing-title {
@@ -318,18 +375,21 @@ p {
 .plan {
   display: flex;
   flex-direction: column;
-  /* align-items: flex; */
   justify-content: center;
-  width: 39.7%;
   padding: 0 40px 0;
   border: 1px solid #e2e2e2;
-  box-shadow: 0 10px 20px 0 #00000026;
+  border-radius: 15px;
   gap: 50px;
+  width: 72%;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.plan:hover {
+  box-shadow: 0 10px 20px 0 #00000026;
 }
 
 .plan-header-title {
   border-bottom: #8d8d8d;
-  width: 100%;
   text-align: left;
 }
 
@@ -349,6 +409,10 @@ p {
   font-weight: 500;
   color: #677788;
   text-decoration: none;
+}
+
+.plan-header p {
+  line-height: 24px;
 }
 
 .plan-divider {
@@ -371,23 +435,298 @@ p {
 
 .feature-row {
   display: flex;
+  gap: 10px;
 }
 
 .plan-feature-item {
   display: flex;
-  padding: 20px;
-  /* border: 1px solid black; */
-  width: 60.3%;
-  
+  width: 50%;
+  /* padding: 20px; */
 }
 
 .item-content {
   display: flex;
   flex-direction: column;
   gap: 20.5px;
+  padding: 20px;
 }
 
 .item-content img {
   height: 50px;
   width: 50px;
 }
+
+.item-content P {
+  line-height: 22px;
+}
+
+.features-title {
+  font-size: 18px;
+}
+
+.cancel-title-with-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.sketch-button {
+  height: 23px;
+  width: 60px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  background-color: #01c9a7;
+  border: 1px solid #01c9a700;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    border 0.5s ease-in-out;
+}
+
+.sketch-button:hover {
+  background-color: white;
+  color: #01c9a7;
+  border: 2px solid #01c9a7;
+}
+
+.hire-us-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 30px;
+  background-color: #20335b;
+}
+
+.left-hire-us {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.hire-us-top {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hire-us-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  gap: 10px;
+}
+
+.hire-us-title p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #677788;
+}
+
+.hire-us-divider {
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.hire-us-quote {
+  color: #ffffff;
+}
+
+.hire-us-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.person-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.person-text h3 {
+  color: white;
+}
+
+.person-photo img {
+  height: 60px;
+  width: 60px;
+  border: 1px solid #00000000;
+  border-radius: 50%;
+}
+
+.right-hire-us {
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.hire-us-form {
+  width: 100%;
+}
+
+.hire-us-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hire-us-form form p {
+  color: black;
+}
+
+.hire-us-form input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #e6e8f2;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form-group-name {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group-select {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group-textarea textarea {
+  height: 150px;
+}
+
+.form-group-checkbox {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group-checkbox input {
+  position: relative;
+}
+
+input[type="checkbox"] {
+  accent-color: green;
+  cursor: pointer;
+  height: 25px;
+  width: 50px;
+}
+
+.checkbox-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  line-height: 22px;
+}
+
+.privacy-policy-link {
+  display: flex;
+  gap: 28px;
+}
+
+.privacy-policy-link a {
+  line-height: 22px;
+  text-decoration: underline dashed 1px;
+  text-underline-offset: 5px;
+}
+
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  padding: 40px 30px 40px;
+}
+
+.footer-content ul li {
+  list-style-type: none;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo img {
+  height: 29.76px;
+  width: 100px;
+}
+
+.contact-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #677788;
+}
+
+.contact-nav div {
+  display: inherit;
+  gap: 9px;
+}
+
+
+.footer-nav-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-container ul li {
+  display: flex;
+}
+
+.nav-container ul {
+  display: inherit;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resources,
+ul li {
+  display: inherit;
+  gap: 9px;
+}
+
+.nav-container ul li i {
+  color: #677788;
+}
+
+.nav-container ul li span {
+  display: inherit;
+  align-items: center;
+  background-color: #2476ff;
+  color: white;
+  font-size: 9px;
+  padding: 2px 4px 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
+}
+
+.nav-container ul li span:hover {
+  background-color: white;
+  color: #2476ff;
+  border: 2px solid #2476ff;
+}
+
+
