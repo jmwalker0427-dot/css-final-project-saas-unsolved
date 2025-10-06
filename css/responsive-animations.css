@@ -1,50 +1,237 @@
-@media (min-width: 1024px) {
-@keyframes slide-in {
+@media (min-width: 1024px) and (hover: hover) {
+  @keyframes slide-in {
     from {
-        transform: translateX(-100%) scale(1.5);
-        opacity: 0;
+      transform: translateX(-100%) scale(1.5);
+      opacity: 0;
     }
     to {
-        transform: translateX(0) scale(1);
-        opacity: 1;
+      transform: translateX(0) scale(1);
+      opacity: 1;
     }
-}
+  }
 
-@keyframes rotate-rise {
+  @keyframes rotate-rise {
     from {
-        transform: translateY(100%) rotate(0) scale(1.5);
-        opacity: 0;
+      transform: translateY(100%) rotate(0) scale(1.5);
+      opacity: 0;
     }
     to {
-        transform: translateY(0) rotate(360deg) scale(1);
-        opacity: 1;
+      transform: translateY(0) rotate(360deg) scale(1);
+      opacity: 1;
     }
-}
+  }
 
-@keyframes bounce {
-    0% { 
-        transform: translateY(-100%) scale(1, 1);
-        opacity: 0;
+  @keyframes bounce {
+    0% {
+      transform: translateY(-100%) scale(1, 1);
+      opacity: 0;
     }
 
     25% {
-        transform: translateY(0) scale(1, 0.5);
+      transform: translateY(0) scale(1, 0.5);
     }
 
     50% {
-        transform: translateY(-50%) scale(1, 1);
+      transform: translateY(-50%) scale(1, 1);
     }
 
     60% {
-        transform: translateY(0) scale(1, 0.75);
+      transform: translateY(0) scale(1, 0.75);
     }
 
     75% {
-        transform: translateY(-25%) scale(1, 1);
+      transform: translateY(-25%) scale(1, 1);
     }
 
     100% {
-        transform: translateY(0) scale(1, 1);
+      transform: translateY(0) scale(1, 1);
     }
+  }
+
+  a:hover {
+    color: #2476ff;
+  }
+
+  .buy-now-button:hover {
+    background-color: white;
+    border: 2px solid #2476ff;
+    color: #2476ff;
+  }
+
+  .plan:hover {
+    box-shadow: 0 10px 20px 0 #00000026;
+  }
+
+  .top-video-button:hover {
+    background-color: white;
+    color: #2476ff;
+    border: 2px solid #2476ff;
+  }
+
+  .sketch-button:hover {
+    background-color: white;
+    color: #01c9a7;
+    border: 2px solid #01c9a7;
+  }
+
+  .nav-container ul li span:hover {
+    background-color: white;
+    color: #2476ff;
+    border: 2px solid #2476ff;
+  }
+
+  .top-navigation .tri-gram {
+    display: none;
+  }
 }
+
+@media (max-width: 1023px) {
+  .top-navigation ul {
+    display: none;
+  }
+
+  .top-navigation .buy-now-button {
+    display: none;
+  }
+
+  .top-navigation .tri-gram {
+    display: flex;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    height: 664px;
+    gap: 10px;
+  }
+
+  .left-hero-section {
+    align-items: center;
+    padding-bottom: 60px;
+  }
+
+  .left-text {
+    width: 100%;
+    align-items: center;
+  }
+
+  .logo-bubble-google {
+    top: 0;
+    left: 110px;
+  }
+
+  .logo-bubble-atlassian {
+    top: 0;
+    left: 287px;
+  }
+
+  .logo-bubble-asana {
+    top: 0;
+    left: 533px;
+  }
+
+  .logo-bubble-paypal {
+    top: 99px;
+    left: 112px;
+  }
+
+  .logo-bubble-google-ads {
+    top: 209px;
+    left: 230px;
+  }
+
+  .logo-bubble-weave {
+    top: 99px;
+    left: 414px;
+  }
+
+  .logo-bubble-calendar {
+    top: 221px;
+    left: 517px;
+  }
+
+  .why-front-section {
+    padding-bottom: 80px;
+  }
+
+  .plans-feature-list {
+    flex-direction: column;
+    padding: 0 44px 0;
+  }
+
+  .plan {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .plan-header-title {
+    text-align: center;
+  }
+
+  .plan-footer {
+    align-items: center;
+  }
+
+  .hire-us-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-hire-us {
+    flex-direction: row;
+    padding: 40px 30px 20px;
+  }
+
+  .right-hire-us {
+    padding: 30px;
+  }
+
+  .invisible-link {
+    display: none;
+  }
+
+  .footer-contact-info {
+    width: 55%;
+  }
+
+  .footer-nav-info {
+    gap: 49px;
+    flex-wrap: wrap;
+  }
+
+  .company-nav {
+    margin-right: 46px;
+  }
+
+  .features-nav {
+    margin-right: 31px;
+  }
+
+  .nav-container {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 40px 16px 0;
+    height: 594px;
+    width: 100%;
+  }
+
+  .left-text {
+    text-align: center;
+  }
+
+  .logo-container {
+  }
+
+  .logo-bubble-google {
+    top: 0;
+    left: 0;
+  }
+
+  .logo-bubble-asana {
+    top: 0;
+    left: 77%;
+  }
 }
