@@ -209,12 +209,16 @@
   .nav-container {
     flex-direction: row;
   }
+
+  .contact-nav a {
+    color: #2476ff;
+  }
 }
 
 @media (max-width: 767px) {
   .hero-section {
-    padding: 40px 16px 0;
-    height: 594px;
+    padding: 40px 16px 25px;
+    height: 100;
     width: 100%;
   }
 
@@ -222,16 +226,168 @@
     text-align: center;
   }
 
-  .logo-container {
-  }
-
   .logo-bubble-google {
     top: 0;
     left: 0;
   }
 
+  .logo-bubble-atlassian {
+    top: 0;
+    left: 114px;
+  }
+
   .logo-bubble-asana {
     top: 0;
-    left: 77%;
+    left: 248px;
+  }
+
+  .logo-bubble-paypal {
+    top: 99px;
+    left: 0;
+  }
+
+  .logo-bubble-google-ads {
+    top: 209px;
+    left: 106px;
+  }
+
+  .logo-bubble-weave {
+    top: 99px;
+    left: 184px;
+  }
+
+  .logo-bubble-calendar {
+    top: 219px;
+    left: 239px;
+  }
+
+  .why-front-section {
+    padding: 0 16px 80px;
+    width: 100%;
+  }
+
+  .why-front-title p {
+    width: 100%;
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  .why-front-bullets-list {
+    flex-direction: column;
+    padding: 0 34px;
+    gap: 17px;
+  }
+
+  .bullet-box {
+    flex-direction: row;
+    width: auto;
+    padding: 0;
+  }
+
+  .bullet-top {
+    justify-content: flex-start;
+    width: 30%;
+  }
+
+  .bullet-title {
+    justify-content: flex-start;
+    font-weight: 700;
+  }
+
+  .bullet-top::before,
+  .bullet-top::after {
+    display: none;
+  }
+
+  .pricing-section {
+    padding: 0 16px 60px;
+  }
+
+  .plans-feature-list {
+    padding: 0;
+  }
+
+  .plan-features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .feature-row {
+    flex-direction: column;
+  }
+
+  .plan-feature-item {
+    width: auto;
+  }
+
+  .item-content {
+    padding: 20px 0 20px;
+  }
+
+  .hire-us-section {
+    padding: 0;
+  }
+
+  .left-hire-us {
+    flex-direction: column;
+    padding: 40px 16px 20px;
+  }
+
+  .hire-us-top {
+    text-align: center;
+  }
+
+  .hire-us-bottom {
+    align-items: center;
+    text-align: center;
+  }
+
+  .right-hire-us {
+    padding: 30px 16px 30px;
+  }
+
+  .form-group-name {
+    flex-direction: column;
+  }
+
+  .form-group-select {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 16px 40px;
+  }
+
+  .footer-contact-info {
+    width: auto;
+    align-items: center;
+  }
+
+  .front-phone {
+    justify-content: center;
+  }
+
+  .footer-nav-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-nav {
+    margin: 0;
+  }
+
+  .features-nav {
+    margin: 0;
+  }
+
+  .nav-list ul {
+    align-items: center;
+  }
+
+  .nav-list h2 {
+    text-align: center;
   }
 }
